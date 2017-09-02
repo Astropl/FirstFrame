@@ -1,6 +1,3 @@
-// Version 1.6
-// Didia³em now¹ ramke
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
@@ -8,15 +5,15 @@ import java.util.Date;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class frameFirst extends JFrame implements ActionListener
+public class FrameFirst22 extends JFrame implements ActionListener
 
 {
 	JButton bExit, bFirstButton;
 	
-	public frameFirst ()
+	public FrameFirst22 ()
 	{
-		setSize (500,400);
-		setTitle("Okienko");
+		setSize (500,700);
+		setTitle("Okienko2");
 		setLayout(null);
 		bFirstButton = new JButton("Nacinij");
 		bFirstButton.setBounds(100, 100, 100, 50);
@@ -29,16 +26,12 @@ public class frameFirst extends JFrame implements ActionListener
 		bExit.addActionListener(this);
 		
 	}
-	
-	
 	public static void main(String[] args) 
 	{
-		frameFirst window = new frameFirst();
+		FrameFirst22 window = new FrameFirst22();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setVisible(true);
 	}
-
-
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
@@ -60,5 +53,8 @@ public class frameFirst extends JFrame implements ActionListener
 		
 		
 	}
-
+public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 }
