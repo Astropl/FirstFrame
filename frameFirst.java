@@ -1,6 +1,7 @@
+// Version 1.5
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-//import java.sql.Date;
 import java.util.Date;
 
 import javax.swing.JButton;
@@ -9,15 +10,22 @@ import javax.swing.JFrame;
 public class frameFirst extends JFrame implements ActionListener
 
 {
+	JButton bExit, bFirstButton;
+	
 	public frameFirst ()
 	{
-		setSize (300,200);
+		setSize (500,400);
 		setTitle("Okienko");
 		setLayout(null);
-		JButton firstButton = new JButton("Nacinij");
-		firstButton.setBounds(100, 100, 100, 50);
-		add(firstButton);
-		firstButton.addActionListener(this);
+		bFirstButton = new JButton("Nacinij");
+		bFirstButton.setBounds(100, 100, 100, 50);
+		add(bFirstButton);
+		bFirstButton.addActionListener(this);
+		
+		bExit = new JButton("Wyjscie");
+		bExit.setBounds(200, 100, 100, 50);
+		add(bExit);
+		bExit.addActionListener(this);
 		
 	}
 	
@@ -33,9 +41,20 @@ public class frameFirst extends JFrame implements ActionListener
 	@Override
 	public void actionPerformed(ActionEvent e) 
 	{
+		Object source = e.getSource();
+			if (source == bFirstButton)
+					{
+						System.out.println(new Date());
+					}
+			else if (source == bExit)
+					{
+						dispose();
+						
+					}
 		//System.out.println(new Date());
 		//System.out.println(new Date());
-		System.out.println(new Date());
+		
+		
 	}
 
 }
